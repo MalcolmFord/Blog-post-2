@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>Malcolm Ford's Blog</title>
+     <meta name="description" content="DESCRIPTION">
+    <link rel="stylesheet" href="style.css">
+
+
+ </head>
+
+ <body>
+   <!-- In the navigation bar, make sure you have two links labeled "Blog List", and "Add Blog Entry". (DONE)
+   Add a DOM element that contains input fields for the user to create a title, date, author, blog entry and keywords. You do not need to enclose them in a <form> element because we're not actually submitting this form anywhere.(DONE)
+   Add a <button> element at the bottom of the input fields labeled "Add". (DONE)
+   The input fields and the add button make up the Add Blog Entry View.
+   The existing view - all the blog entries - will be referred to as the Blog List View. (DONE)
+   The Add Blog Entry View should not appear when the user first visits your page. Only the blog list should be visible. (DONE)
+   When the user clicks on "Add Blog Entry" in the navigation bar, the Blog List View should be hidden, and the Add Blog Entry View should be shown (see example wireframe).(DONE)
+   When the user clicks on "Blog List" in the navigation bar, the Add Blog Entry View should be hidden, and the Blog List View should be shown (see example wireframe).(DONE)S
+   Once the user fills out the blog entry form and clicks the add button, you should collect the values from the input fields, add the blog post to the array of blog objects, and update the blog list in the DOM.
+   Part Two -->
+   <header>Malcolm's blog
+     <nav><a href="#" id="blogList">Blog list</a><a href="#" id="addBlog">Add blog entry</a></nav>
+   </header>
+   <div id="Add-Blog-Entry">
+     <div class="inputs">
+     <input type="text" placeholder="Title" id="title">
+     <input type="text" placeholder="Date" id=date>
+     <input type="text" placeholder="Author" id=author>
+     <input type="text" placeholder="Blog Entry" id=blogEntry>
+     <input type="text" placeholder="Keywords" id="keywords"></div>
+     <button id="button">Add</button>
+   </div>
+   <div id="List-View">
+     <article class="articles">
+       <header>Title 1</header>
+       <section>Article section</section>
+       <footer>&copy Malcolm Ford 2017</footer>
+     </article>
+     <article class="articles">
+       <header>Title 2</header>
+       <section>Article section</section>
+       <footer>&copy Malcolm Ford 2017</footer>
+
+     </article>
+     <article class="articles">
+       <header>Title 3</header>
+       <section>Article section</section>
+       <footer>&copy Malcolm Ford 2017</footer>
+     </article>
+     <article class="articles">
+       <header>Title 4</header>
+       <section>Article section</section>
+       <footer>&copy Malcolm Ford 2017</footer>
+     </article>
+     <article class="articles">
+       <article>Title 5</article>
+       <section>Article section</section>
+       <footer>&copy Malcolm Ford 2017</footer>
+     </article>
+   <footer>&copy Malcolm Ford 2017</footer>
+
+   </div>
+
+
+
+  <script type="text/javascript" src="main.js"></script>
+ </body>
+
+ </html>
