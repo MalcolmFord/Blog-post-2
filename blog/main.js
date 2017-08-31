@@ -8,19 +8,21 @@
 // When the user clicks on "Blog List" in the navigation bar, the Add Blog Entry View should be hidden, and the Blog List View should be shown (see example wireframe).
 // Once the user fills out the blog entry form and clicks the add button, you should collect the values from the input fields, add the blog post to the array of blog objects, and update the blog list in the DOM.
 // Part Two
+
+//I am declareing any possible variables that I might need
 let addBlog = document.getElementById("addBlog");
-let blogList = document.getElementById("blogList");
-let AddBlogEntry = document.getElementById("Add-Blog-Entry");
-let ListView = document.getElementById("List-View");
-let button = document.getElementById("button");
-let title = document.getElementById("title");
-let author = document.getElementById("author")
-let date = document.getElementById("date");
-let keywords = document.getElementById("keywords");
-let blogEntry = document.getElementById("blogEntry");
+    blogList = document.getElementById("blogList"),
+    AddBlogEntry = document.getElementById("Add-Blog-Entry"),
+    ListView = document.getElementById("List-View"),
+    button = document.getElementById("button"),
+    title = document.getElementById("title"),
+    author = document.getElementById("author"),
+    date = document.getElementById("date"),
+    keywords = document.getElementById("keywords"),
+    blogEntry = document.getElementById("blogEntry");
 
 
-
+//I am toggleing the add blog entry ... and the blog list
 AddBlogEntry.classList.toggle("hidden");
 addBlog.addEventListener("click", function(){
   AddBlogEntry.className="";
@@ -38,3 +40,70 @@ button.addEventListener("click", function(){
                          <section>${keywords.value}</section>
                           `
 })
+
+//I am now getting data from the blog.json file
+let xml = new XMLHttpRequest();
+xml.addEventListener("load", xmlLoad);
+xml.addEventListener("error", xmlError);
+function xmlLoad(event){
+  let data = JSON.parse(event.target.responseText);
+  showData(data);
+};
+
+function xmlError(event){
+};
+//This is displaying the data to the DOM
+function showData(data){
+  for(item in data){
+    //I will display the blog posts into the DOM
+    let dataItem = data[item]
+
+
+
+  for(i = 0; i< dataItem.blogEntries.length; i++){
+    ListView.innerHTML += `<div class="divs">
+    <h3>${dataItem.blogEntries[i].title}</h3>
+    <h4>${dataItem.blogEntries[i].author}</h4>
+    <h6>${dataItem.blogEntries[i].date}</h6>
+    <p>${dataItem.blogEntries[i].blogPost}</p>
+    <button class="delete">Delete</button>
+    <hr>
+    </div>`
+  }
+
+  //This is where I'm starting to do the delete function
+  let delBtn = document.getElementsByClassName("delete");
+  let divs = document.getElementsByClassName("divs");
+  for( i =0; i< delBtn.length ; i++){
+    console.log("delBtn.length",delBtn.length);
+    console.log("I listening");
+    delBtn[i].addEventListener("click",(event) => {
+      console.log("event.target.parentNode",event.target.parentNode);
+      console.log(event);
+      event.target.parentNode.remove();
+    });
+  }
+
+    // console.log("data key", Object.keys(dataItem));
+    //I am pulling data specificly
+
+      // dataItem.map(function(){
+      //   console.log("this is data",data.blogEntries.title);
+      //   ListView.innerHTML += `
+      //     <div>
+      //
+      //       <header>${data.blogEntries[i].title}</header>
+      //     </div>
+      //   `
+      //
+      // })
+
+
+
+
+  }
+
+};
+
+xml.open('GET', 'blog.json');
+xml.send();

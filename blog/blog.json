@@ -1,35 +1,35 @@
-{
-  "title":"Test blog 1",
-  "author": "Malcolm Ford",
-  "date": "8/22/2017",
-  "blogPost": "Test blog post",
-  "keywords": "test"
-},
-{
-  "title":"Test blog 1",
-  "author": "Malcolm Ford",
-  "date": "8/22/2017",
-  "blogPost": "Test blog post",
-  "keywords": "test"
-},
-{
-  "title":"Test blog 1",
-  "author": "Malcolm Ford",
-  "date": "8/22/2017",
-  "blogPost": "Test blog post",
-  "keywords": "test"
-},
-{
-  "title":"Test blog 1",
-  "author": "Malcolm Ford",
-  "date": "8/22/2017",
-  "blogPost": "Test blog post",
-  "keywords": "test"
-},
-{
-  "title":"Test blog 1",
-  "author": "Malcolm Ford",
-  "date": "8/22/2017",
-  "blogPost": "Test blog post",
-  "keywords": "test"
-}
+[
+	{
+		"blogEntries": [{
+			"title": "Test blog 1",
+			"author": "Malcolm Ford",
+			"date": "8/22/2017",
+			"blogPost": "Test blog post",
+			"keywords": "test"
+			}, {
+				"title": "Test blog 2",
+				"author": "Malcolm Ford",
+				"date": "8/22/2017",
+				"blogPost": "Test blog post",
+				"keywords": "test"
+				}, {
+					"title": "Test blog 3",
+					"author": "Malcolm Ford",
+					"date": "8/22/2017",
+					"blogPost": "Test blog post",
+					"keywords": "test"
+					}, {
+						"title": "Test blog 4",
+						"author": "Malcolm Ford",
+						"date": "8/22/2017",
+						"blogPost": "Test blog post",
+						"keywords": "test"
+						}, {
+							"title": "Test blog 5",
+							"author": "Malcolm Ford",
+							"date": "8/22/2017",
+							"blogPost": "Test blog post",
+							"keywords": "test"
+							}]
+						}
+]
